@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body>
+
+      <table border = 1>
+         <thead>
+            <td>Ürün Id</td>
+            <td>Ürün Adi</td>
+            <td>Ürün Fiyatı</td>
+         </thead>
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["urunadi"]}}</td>
+               <td> {{ row["urunfiyat"]}}</td>
+            </tr>
+         {% endfor %} 
+        </table>
+
+
+
+        <br><br><br>
+      <a href = "/">Anasayfaya dön</a>
+      
+   </body>
+</html>

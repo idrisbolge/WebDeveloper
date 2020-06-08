@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+   <body>
+      Bulma sonucu: {{ msg }}
+      
+      <form action = "{{ url_for('guncelle') }}", method = "POST">     
+         <table border = 1>
+            <thead>
+               <td>Seçim</td>
+               <td>Ürün Adi</td>
+               <td>Ürün fiyatı</td>
+            </thead>
+            {% for row in rows %}
+               <tr> 
+                  <td> <input type="checkbox" id="id_{{row['id']}}" name="secilen" value="{{row['id']}}"></td>
+                  <td>{{row["urunadi"]}}</td>
+                  <td>{{row["urunfiyat"]}}</td>
+
+               </tr>
+            {% endfor %}
+           </table>
+   
+   
+           <h3>Ürün  bilgileri </h3>
+             Ürün Adi<br>
+           <input type = "text" name = "ad" /><br>
+             
+           Ürün fiyati<br>
+           <input type = "text" name = "fiyat" /><br>
+             
+       
+   
+           <input type = "submit" value = "Güncelle" /><br>
+         </form>
+         
+         <h2><a href = "\yetkili">Ana sayfaya dön</a></h2> 
+   </body>
+</html>

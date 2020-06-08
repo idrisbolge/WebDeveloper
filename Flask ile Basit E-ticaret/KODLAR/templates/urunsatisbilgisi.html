@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Ürün Adi</td>
+            <td>Sayısı</td>
+         </thead>
+         {{s}}
+         {% for row in rows %}
+            <tr>
+               <td>{{row["urunadi"]}}</td>
+               <td>{{row["sayi"]}}</td>
+            </tr>
+         {% endfor %}
+        </table>
+      
+      <a href = "/">Anasayfaya dön</a>
+      
+   </body>
+</html>

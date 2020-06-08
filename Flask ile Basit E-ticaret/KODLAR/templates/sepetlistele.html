@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+   <body>
+         <form action= "{{ url_for('Satis') }}", method="post">
+      <table border = 1>
+         <thead>
+            <td>İd</td>
+            <td>Urun Adi</td>
+            <td>Urun Adet</td>
+         </thead>
+         {{s}}
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["urunadi"]}}</td>
+               <td>{{row["urunAdet"]}}</td>
+            </tr>
+         {% endfor %}
+        </table>
+        <br><br>
+        <input class="btn btn-default" type="submit" value="Satın Al">
+    </form>
+ <br><br><br><br>
+        <br><br>
+        <br><br>
+        <form action= "{{ url_for('UrunAdetDegistir') }}", method="post">
+            <input type="text" placeholder="Adeti değişecek Ürün id" name="urunid" value="{{
+                request.form.urunid }}">
+                <br><br>
+                <input type="text" placeholder="Adeti" name="urunAdet" value="{{
+                  request.form.urunAdet }}">
+                  <br><br>
+              <input class="btn btn-default" type="submit" value="Değiştir">
+          </form>
+          <br><br><br><br>
+          <form action= "{{ url_for('UrunSil') }}", method="post">
+               <input type="text" placeholder="Silinecek Ürün id" name="silinenid" value="{{
+                   request.form.silinenid }}">
+
+                     <br><br>
+                 <input class="btn btn-default" type="submit" value="Ürünü Sil">
+             </form>
+
+             <form action= "{{ url_for('UrunleriSil') }}", method="post">
+                        <br><br>
+                    <input class="btn btn-default" type="submit" value="Sepeti Boşalt">
+                </form>
+             <br><br>
+
+      <a href = "/">Anasayfaya dön</a>
+      
+   </body>
+</html>

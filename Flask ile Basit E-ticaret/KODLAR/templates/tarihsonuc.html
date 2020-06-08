@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body>
+        Bulma sonucu: {{ msg }}
+    <table border = 1>
+        <thead>
+
+           <td>Urun Adi</td>
+           <td>Urun Adet</td>
+           <td>Tarih</td>
+        </thead>
+        {{s}}
+        {% for row in rows %}
+           <tr>
+
+              <td>{{row["urunadi"]}}</td>
+              <td>{{row["urunAdet"]}}</td>
+              <td>{{row["timestamp"]}}</td>
+           </tr>
+        {% endfor %}
+       </table>
+      
+      <a href = "/">Anasayfaya dön</a>
+      
+   </body>
+</html>

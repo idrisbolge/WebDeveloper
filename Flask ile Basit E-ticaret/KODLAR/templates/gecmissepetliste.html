@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>İd</td>
+            <td>Urun Adi</td>
+            <td>Urun Adet</td>
+            <td>Urun Tarihi</td>
+         </thead>
+         {{s}}
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["urunadi"]}}</td>
+               <td>{{row["urunAdet"]}}</td>
+               <td>{{row["timestamp"]}}</td>
+            </tr>
+         {% endfor %}
+        </table>
+        <br><br>
+   
+
+        
+
+      <a href = "/">Anasayfaya dön</a>
+      
+   </body>
+</html>
