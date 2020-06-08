@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<body>
+    <form action="{{ url_for('kayit_ekle')}}",method="POST">
+        <h3>Öğrenci Bilgileri</h3>
+        İsim<br> <input type="text" name="ad" /><br>
+        Adres<br> <textarea name="adres"></textarea> <br>
+        Şehir<br> <input type="text" name="sehir" /><br>
+
+      <input type="submit" value="gonder" /><br>
+
+
+    </form>
+
+</body>
+
+
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <body>
+        <table border=1>
+            <thead>
+                <td>İsim</td>
+                <td>Adres</td>
+                <td>Şehir</td>
+            </thead>
+
+            {% for row in rows %}
+            <tr>
+                <td>{{row["ad"]}}</td>
+                <td>{{row["adres"]}}</td>
+                <td>{{row["sehir"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    <a href="/">Anasayfaya dön</a>
+
+
+
+    </body>
+
+
+</html>
